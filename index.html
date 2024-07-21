@@ -109,6 +109,7 @@
           color:#666666;
           padding-top:20px;
         }
+
     </style>
 </head>
 <body>
@@ -117,12 +118,10 @@
       <div class="nav-links">
           <a href="#" class="nav-link">Activities</a>
       </div>
+      <h1 class="hero-text" id="cartland-title">Cartland of Cape Cod - Family Fun</h1>
+      <p class="contact-info">3022 Cranberry Hwy, Wareham, MA 02538</p>
+      <p class="contact-info">Phone: <span id="phone-number">508-295-8360</span></p>
     </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
-      <h1 class="hero-text">Cartland of Cape Cod - Family Fun</h1>
-    </section>
 
     <!-- Activity Section -->
     <section id="activities">
@@ -134,22 +133,25 @@
       </div>
     </section>
 
-    <!-- Contact Information -->
-    <section id="contact">
-      <p class="contact-info">3022 Cranberry Hwy, Wareham, MA 02538</p>
-      <p class="contact-info">Phone: 508-295-8360</p>
-      <p class="contact-info">Open Daily, 10am-8pm</p>
-    </section>
-
     <!-- Footer -->
     <footer>
       <p>&copy; 2023 Cartland of Cape Cod. All rights reserved.</p>
       <div class="social-links">
           <a href="#" class="social-link" target="_blank"><i class="fa fa-facebook"></i></a>
           <a href="#" class="social-link" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a href="#" class="social-link" target="_blank"><i class="fa fa-phone"></i> (555) 555-5555</a>
       </div>
+
+      <!-- Click to Call Button -->
+      <button id="call-button" onclick="window.location.href='tel:+15082958360'">Click to Call</button>
+
     </footer>
+
+    <script>
+      // Remove the call button after clicking it
+      document.getElementById('call-button').addEventListener('click', function() {
+        this.style.display = 'none';
+      });
+    </script>
 
 </body>
 </html>
