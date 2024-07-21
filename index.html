@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
         }
 
         header {
@@ -34,68 +35,49 @@
             text-decoration: none;
         }
 
-        #hero {
-            background-image: url('https://r2.e-z.host/13985022-a2bd-482f-bea2-18ff85c0dc2e/1e5o2hay.jpg');
-            background-size: cover;
-            background-position: center;
-            height: calc(75vh - 30px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #hero h1 {
+        .hero-text {
             font-size: 48px;
-            color: #fff;
+            font-family: 'Pacifico', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px;
         }
 
         @media only screen and (max-width: 768px) {
-          #hero {
-              height: calc(100vh - 40px);
-          }
-          #hero h1 {
+          .hero-text {
               font-size: 32px;
           }
         }
 
         @media only screen and (max-width: 480px) {
-          #hero {
-              height: calc(100vh - 20px);
-          }
-          #hero h1 {
+          .hero-text {
               font-size: 24px;
           }
         }
 
-        /* Activity Section Styles */
-        .activity-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Footer Styles */
+        footer {
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          clear:both;
         }
 
-        .activity-button {
-            background-color: #333;
-            color: #fff;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+        .social-links {
+          display:flex;
+          justify-content:flex-start;
+          margin-top:10px;
         }
 
-        .activity-button:hover {
-            background-color: #555;
+        .social-link {
+          margin-right:10px;
         }
 
-        @media only screen and (max-width: 768px) {
-          .activity-container {
-              flex-direction: column-reverse;
-          }
-          .activity-button {
-              width: 100%;
-              margin-bottom: 10px;
-          }
-      }
+        .social-link a {
+          color:#fff;
+          text-decoration:none;
+        }
     </style>
 </head>
 <body>
@@ -108,13 +90,12 @@
 
     <!-- Hero Section -->
     <section id="hero">
-      <h1>Cartland of Cape Cod - Family Fun</h1>
+      <h1 class="hero-text">Cartland of Cape Cod - Family Fun</h1>
     </section>
 
     <!-- About Section -->
     <section id="about">
       <h2>Activities</h2>
-      <img src="images/cartland-logo.png" alt="Cartland of Cape Cod logo" style="width: 50%; max-width: 300px; height:auto;">
       <div class="activity-container">
           <button class="activity-button">Go-Karts</button>
           <button class="activity-button">Mini Golf</button>
@@ -123,13 +104,15 @@
       </div>
     </section>
 
-<!-- Footer -->
-<footer>&copy; 2023 Cartland of Cape Cod. All rights reserved.</footer>
-
-<!-- Scripts -->
-<script src=""></script>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Cartland of Cape Cod. All rights reserved.</p>
+      <div class="social-links">
+          <a href="#" class="social-link" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="social-link" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="social-link" target="_blank"><i class="fa fa-phone"></i> (555) 555-5555</a>
+      </div>
+    </footer>
 
 </body>
 </html>
-
-<!-- Create separate HTML pages for each activity (e.g. go-karts.html, mini-golf.html, etc.) -->
