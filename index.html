@@ -19,19 +19,17 @@
             text-align: center;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        .nav-links {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
-        nav li {
+        .nav-link {
             margin-right: 20px;
         }
 
-        nav a {
+        .nav-link a {
             color: #fff;
             text-decoration: none;
         }
@@ -51,15 +49,6 @@
             color: #fff;
         }
 
-        #hero button {
-            background-color: #2ecc71;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
         #about {
             background-color: #f7f7f7;
             padding: 20px;
@@ -69,26 +58,26 @@
             width: 150px;
         }
 
-        #activities ul {
+        #about ul {
             list-style: none;
             margin: 0;
             padding: 0;
         }
 
-        #activities li {
+        #about li {
             margin-bottom: 20px;
         }
 
-        #activities i {
+        #about i {
             font-size: 24px;
         }
 
-        #activities a {
+        #about a {
             text-decoration: none;
             color: #333;
         }
 
-        #activities a:hover {
+        #about a:hover {
             text-decoration: underline;
         }
 
@@ -105,56 +94,58 @@
         .activity-info {
             font-size: 18px;
         }
+
+        /* Media Queries for Mobile Devices */
+        @media only screen and (max-width: 768px) {
+          .nav-links {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+          .nav-link {
+              margin-bottom: 10px;
+          }
+          #hero h1 {
+              font-size: 32px;
+          }
+          #about img {
+              width: 100%;
+          }
+          .activity-container {
+              flex-direction: row;
+              justify-content: space-between;
+          }
+          .activity-icon {
+              font-size: 36px;
+          }
+          .activity-info {
+              font-size: 16px;
+          }
+      }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <!-- <li><a href="#contact">Contact Us</a></li> -->
-                <!-- Contact section removed -->
-                <!-- </li> -->
-                </ul>
-    </nav>
+      <div class="nav-links">
+          <a href="#" class="nav-link">About Us</a>
+          <a href="#" class="nav-link">Activities</a>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
       <h1>Cartland of Cape Cod - Family Fun</h1>
-      <button>Learn More</button>
     </section>
 
     <!-- About Section -->
     <section id="about">
       <h2>About Us</h2>
       <p>We're a family-owned entertainment center located on Cape Cod, offering a variety of activities for all ages.</p>
-      <img src="images/cartland-logo.png" alt="Cartland of Cape Cod logo">
-    </section>
-
-    <!-- Activities Section -->
-    <section id="activities">
-      <h2>Activities</h2>
       <ul>
-          <li class="activity-container">
-              <i class="fas fa-cart activity-icon"></i>
-              <p class="activity-info"><a href="go-karts.html">Go-Karts</a></p>
-          </li>
-          <li class="activity-container">
-              <i class="fas fa-golf-ball activity-icon"></i>
-              <p class="activity-info"><a href="mini-golf.html">Mini Golf</a></p>
-          </li>
-          <li class="activity-container">
-              <i class="fas fa-baseball-bat activity-icon"></i>
-              <p class="activity-info"><a href="batting-cages.html">Batting Cages</a></p>
-          </li>
-          <li class="activity-container">
-              <i class="fas fa-rocket activity-icon"></i>
-              <p class="activity-info"><a href="bumper-boats.html">Bumper Boats</a></p>
-          </li>
+          <li><i class="fas fa-cart activity-icon"></i><p class="activity-info"><a href="go-karts.html">Go-Karts</a></p></li>
+          <li><i class="fas fa-golf-ball activity-icon"></i><p class="activity-info"><a href="mini-golf.html">Mini Golf</a></p></li>
+          <li><i class="fas fa-baseball-bat activity-icon"></i><p class="activity-info"><a href="batting-cages.html">Batting Cages</a></p></li>
+          <li><i class="fas fa-rocket activity-icon"></i><p class="activity-info"><a href="bumper-boats.html">Bumper Boats</a></p></li>
       </ul>
     </section>
 
