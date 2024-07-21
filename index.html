@@ -37,9 +37,9 @@
         }
 
         #hero {
-            background-image: linear-gradient(to bottom, #3498db, #2ecc71);
-            background-size: 100% 300px;
-            background-position: 0% 100%;
+            background-image: url('https://r2.e-z.host/13985022-a2bd-482f-bea2-18ff85c0dc2e/cyzv2g1f.JPG');
+            background-size: cover;
+            background-position: center;
             height: calc(100vh - 60px);
             display: flex;
             justify-content: center;
@@ -83,23 +83,27 @@
             font-size: 24px;
         }
 
-        #contact form {
-            max-width: calc(100% - 20px);
-            padding: 20px;
+        #activities a {
+            text-decoration: none;
+            color: #333;
         }
 
-        #contact label {
-            display: block;
+        #activities a:hover {
+            text-decoration: underline;
         }
 
-        #contact input, #contact textarea {
-            width: calc(100% - 20px);
+        .activity-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+        .activity-icon {
+            font-size: 48px;
+        }
+
+        .activity-info {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -111,51 +115,56 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#activities">Activities</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+                <!-- <li><a href="#contact">Contact Us</a></li> -->
+                <!-- Contact section removed -->
+                <!-- </li> -->
+                </ul>
+    </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
-        <h1>Cartland of Cape Cod - Family Fun</h1>
-        <button>Learn More</button>
+      <h1>Cartland of Cape Cod - Family Fun</h1>
+      <button>Learn More</button>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>We're a family-owned entertainment center located on Cape Cod, offering a variety of activities for all ages.</p>
-        <img src="images/cartland-logo.png" alt="Cartland of Cape Cod logo">
+      <h2>About Us</h2>
+      <p>We're a family-owned entertainment center located on Cape Cod, offering a variety of activities for all ages.</p>
+      <img src="images/cartland-logo.png" alt="Cartland of Cape Cod logo">
     </section>
 
     <!-- Activities Section -->
     <section id="activities">
-        <h2>Activities</h2>
-        <ul>
-            <li><i class="fas fa-cart"></i> Go-Karts</li>
-            <li><i class="fas fa-golf-ball"></i> Mini Golf</li>
-            <li><i class="fas fa-baseball-bat"></i> Batting Cages</li>
-            <li><i class="fas fa-rocket"></i> Bumper Boats</li>
-        </ul>
+      <h2>Activities</h2>
+      <ul>
+          <li class="activity-container">
+              <i class="fas fa-cart activity-icon"></i>
+              <p class="activity-info"><a href="go-karts.html">Go-Karts</a></p>
+          </li>
+          <li class="activity-container">
+              <i class="fas fa-golf-ball activity-icon"></i>
+              <p class="activity-info"><a href="mini-golf.html">Mini Golf</a></p>
+          </li>
+          <li class="activity-container">
+              <i class="fas fa-baseball-bat activity-icon"></i>
+              <p class="activity-info"><a href="batting-cages.html">Batting Cages</a></p>
+          </li>
+          <li class="activity-container">
+              <i class="fas fa-rocket activity-icon"></i>
+              <p class="activity-info"><a href="bumper-boats.html">Bumper Boats</a></p>
+          </li>
+      </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us!</p>
-        <form action="#">
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name"><br />
-            <label for="email">Email:</label><br />
-            <input type="email" id="email" name="email"><br />
-            <label for="message">Message:</label><br />
-            <textarea id="message" name="message"></textarea><br />
-            <button>Send Message</button>
-        </form>
-    </section>
+<!-- Footer -->
+<footer>&copy; 2023 Cartland of Cape Cod. All rights reserved.</footer>
 
-    <!-- Footer -->
-    &copy; 2023 Cartland of Cape Cod. All rights reserved.
+<!-- Scripts -->
+<script src=""></script>
+
 </body>
 </html>
+
+<!-- Create separate HTML pages for each activity (e.g. go-karts.html, mini-golf.html, etc.) -->
