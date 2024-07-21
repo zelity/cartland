@@ -12,7 +12,28 @@
             padding: 0;
         }
 
-       
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-link {
+            margin-right: 20px;
+        }
+
+        .nav-link a {
+            color: #fff;
+            text-decoration: none;
+        }
+
         #hero {
             background-image: url('https://r2.e-z.host/13985022-a2bd-482f-bea2-18ff85c0dc2e/cyzv2g1f.JPG');
             background-size: cover;
@@ -28,50 +49,23 @@
             color: #fff;
         }
 
-        #about {
-            background-color: #f7f7f7;
-            padding: 20px;
-        }
-
-        #about img {
-            width: 150px;
-        }
-
-        #about ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        #about li {
-            margin-bottom: 20px;
-        }
-
-        #about i {
-            font-size: 24px;
-        }
-
-        #about a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        #about a:hover {
-            text-decoration: underline;
-        }
-
         .activity-container {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .activity-icon {
-            font-size: 48px;
+        .activity-button {
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
 
-        .activity-info {
-            font-size: 18px;
+        .activity-button:hover {
+            background-color: #555;
         }
 
         /* Media Queries for Mobile Devices */
@@ -86,18 +80,9 @@
           #hero h1 {
               font-size: 32px;
           }
-          #about img {
+          .activity-button {
               width: 100%;
-          }
-          .activity-container {
-              flex-direction: row;
-              justify-content: space-between;
-          }
-          .activity-icon {
-              font-size: 36px;
-          }
-          .activity-info {
-              font-size: 16px;
+              margin-bottom: 10px;
           }
       }
     </style>
@@ -106,7 +91,6 @@
     <!-- Header -->
     <header>
       <div class="nav-links">
-          <a href="#" class="nav-link">About Us</a>
           <a href="#" class="nav-link">Activities</a>
       </div>
     </header>
@@ -118,14 +102,14 @@
 
     <!-- About Section -->
     <section id="about">
-      <h2>About Us</h2>
-      <p>We're a family-owned entertainment center located on Cape Cod, offering a variety of activities for all ages.</p>
-      <ul>
-          <li><i class="fas fa-cart activity-icon"></i><p class="activity-info"><a href="go-karts.html">Go-Karts</a></p></li>
-          <li><i class="fas fa-golf-ball activity-icon"></i><p class="activity-info"><a href="mini-golf.html">Mini Golf</a></p></li>
-          <li><i class="fas fa-baseball-bat activity-icon"></i><p class="activity-info"><a href="batting-cages.html">Batting Cages</a></p></li>
-          <li><i class="fas fa-rocket activity-icon"></i><p class="activity-info"><a href="bumper-boats.html">Bumper Boats</a></p></li>
-      </ul>
+      <h2>Activities</h2>
+      <img src="images/cartland-logo.png" alt="Cartland of Cape Cod logo">
+      <div class="activity-container">
+          <button class="activity-button">Go-Karts</button>
+          <button class="activity-button">Mini Golf</button>
+          <button class="activity-button">Batting Cages</button>
+          <button class="activity-button">Bumper Boats</button>
+      </div>
     </section>
 
 <!-- Footer -->
