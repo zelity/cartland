@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cartland of Cape Cod</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#coupons">Food Coupons</a></li>
+            </ul>
+        </nav>
+        <h1>Cartland of Cape Cod</h1>
+    </header>
+    <main>
+        <section id="hero">
+            <img src="cape-cod-image.jpg" alt="Cape Cod scenery">
+            <h2>Experience the Best of Cape Cod with Cartland</h2>
+            <p>Relax, unwind, and enjoy the beautiful scenery and activities that Cape Cod has to offer.</p>
+            <button class="button">Learn More</button>
+        </section>
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <ul>
+                <li><button class="button" style="background-color: #4CAF50;">Basic Package ($X)</button> - includes [list of included services]</li>
+                <li><button class="button" style="background-color: #2196F3;">Deluxe Package ($Y)</button> - includes [list of included services]</li>
+                <li><button class="button" style="background-color: #9C27B0;">Custom Package</button> - allows customers to customize their own package</li>
+            </ul>
+            <button class="button">Book Now</button>
+        </section>
+        <section id="activities">
+            <h2>Activities</h2>
+            <ul>
+                <li><button class="button" style="background-color: #4CAF50;">Whale Watching</button></li>
+                <li><button class="button" style="background-color: #2196F3;">Kayaking</button></li>
+                <li><button class="button" style="background-color: #9C27B0;">Beach Trips</button></li>
+                <li><button class="button" style="background-color: #4CAF50;">Hiking</button></li>
+            </ul>
+            <button class="button">Learn More</button>
+        </section>
+        <section id="coupons">
+            <h2>Food Coupons</h2>
+            <ul>
+                <li><p>Discounted meals at a local seafood restaurant (<span class="coupon-code">USE CODE SEAFOOD15</span>)</p></li>
+                <li><p>Free dessert with the purchase of a meal at a popular cafe (<span class="coupon-code">SHOW ME THE DEAL!</span>)</p></li>
+            </ul>
+            <button class="button">Print Coupon or Show Me the Deal!</button>
+        </section>
+    </main>
+<footer>
+    <p>&copy; 2023 Cartland of Cape Cod. All rights reserved.</p>
+    <ul id="social-media">
+        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+
+<script src="script.js"></script>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+#hero {
+  background-image: url('cape-cod-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero h2 {
+  color: #fff;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.coupon-code {
+  font-size: smaller;
+}
+
+.social-media {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media a {
+  color: #337ab7;
+}
