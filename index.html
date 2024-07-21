@@ -3,114 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go-Karts at Cartland of Cape Cod</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cartland of Cape Cod - Family Fun</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?cape-cod-beach');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-link {
+            margin-right: 20px;
+        }
+
+        .nav-link a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero-text {
+            font-size: 48px;
+            font-family: 'Pacifico', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .hero-text {
+              font-size: 32px;
+          }
+        }
+
+        @media only screen and (max-width: 480px) {
+          .hero-text {
+              font-size: 24px;
+          }
+        }
+
+        /* Activity Section Styles */
+        .activity-container {
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          padding-top:50px;
+        }
+
+        .activity-button {
+          background-color:#333;
+          color:#fff;
+          border:none;
+          border-radius:10px;
+          padding:10px 20px;
+          font-size:24px;
+          cursor:pointer;
+          margin-bottom:20px;
+        }
+
+        .activity-button:hover {
+          background-color:#555;
+        }
+
+        /* Footer Styles */
+        footer {
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          clear:both;
+        }
+
+        .social-links {
+          display:flex;
+          justify-content:flex-start;
+          margin-top:10px;
+        }
+
+        .social-link {
+          margin-right:10px;
+        }
+
+        .social-link a {
+          color:#fff;
+          text-decoration:none;
+        }
+
+        /* Contact Information Styles */
+        .contact-info {
+          font-size:18px;
+          font-style:normal;
+          color:#666666;
+          padding-top:20px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="nav-links">
-            <a href="#" class="nav-link">Cartland of Cape Cod - Family Fun</a>
-        </div>
-        <h1>Go-Karts</h1>
+      <div class="nav-links">
+          <a href="#" class="nav-link">Activities</a>
+      </div>
+      <h1 class="hero-text" id="cartland-title">Cartland of Cape Cod - Family Fun</h1>
+      <p class="contact-info">3022 Cranberry Hwy, Wareham, MA 02538</p>
+      <p class="contact-info">Phone: <span id="phone-number">508-295-8360</span></p>
     </header>
-    <main>
-        <section class="go-karts-section">
-            <h2>Get Ready for a Racing Good Time!</h2>
-            <p>Our go-kart track is designed for kids and adults alike! With high-speed karts and winding tracks, you'll be racing like a pro in no time.</p>
-            <img src="go-karts-image.jpg" alt="Go-Karts at Cartland of Cape Cod">
-            <ul>
-                <li>High-speed karts reaching speeds of up to 25mph</li>
-                <li>Winding track with hairpin turns and straightaways</li>
-                <li>Air-conditioned comfort stations for parents and spectators</li>
-                <li>Racing for kids and adults, with separate tracks for each age group</li>
-            </ul>
-        </section>
-        <section class="prices-section">
-            <h2>Pricing</h2>
-            <p>We offer a variety of pricing options to fit your needs:</p>
-            <table>
-                <tr>
-                    <th>Pricing Option</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Solo Ride</td>
-                    <td>$12.99</td>
-                </tr>
-                <tr>
-                    <td>Couple's Package (2 rides)</td>
-                    <td>$24.99</td>
-                </tr>
-                <tr>
-                    <td>Family Pack (4 rides)</td>
-                    <td>$49.99</td>
-                </tr>
-            </table>
-        </section>
-    </main>
+
+    <!-- Activity Section -->
+    <section id="activities">
+      <div class="activity-container">
+          <button class="activity-button" onclick="location.href='go-karts.html'">Go-Karts</button>
+          <button class="activity-button" onclick="location.href='mini-golf.html'">Mini Golf</button>
+          <button class="activity-button" onclick="location.href='batting-cages.html'">Batting Cages</button>
+          <button class="activity-button" onclick="location.href='bumper-boats.html'">Bumper Boats</button>
+          <button class="activity-button" onclick="location.href='food.html'">Food</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Cartland of Cape Cod. All rights reserved.</p>
+      <p>&copy; 2023 Cartland of Cape Cod. All rights reserved.</p>
+      <div class="social-links">
+          <a href="#" class="social-link" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="social-link" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+
+      <!-- Click to Call Button -->
+      <button id="call-button" onclick="window.location.href='tel:+15082958360'">Click to Call</button>
+
     </footer>
 
-    <!-- JavaScript files -->
-    <script src="script.js"></script>
+    <script>
+      // Remove the call button after clicking it
+      document.getElementById('call-button').addEventListener('click', function() {
+        this.style.display = 'none';
+      });
+    </script>
 
 </body>
 </html>
-
-<style>
-
-/* Add styles for the page here */
-.go-karts-section {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-}
-
-.go-karts-section h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 0;
-}
-
-.go-karts-section p {
-  font-size: 18px;
-}
-
-.go-karts-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.go-karts-section ul li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.go-karts-section ul li:last-child {
-  border-bottom: none;
-}
-
-.prices-section {
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-
-.prices-section h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 0;
-}
-
-.prices-section table {
-  width: 100%;
-}
-
-.prices-section th, .prices-section td {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-</style>
-
-<!-- Add an image named "go-karts-image.jpg" to the images folder -->
